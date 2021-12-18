@@ -5,9 +5,7 @@ var alphabetUpper = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 var special = ("!@#$%^&*()_+~{}|[]\<>?,./:;'");
 var numbers = ("0123456789");
 var charactersLength = [alphabetUpper, alphabetLower, special, numbers];
-// var x = 8;
-// var expression1 = (x >= 8);
-// var expression2 = (x <= 128); 
+
 
 //Users variables
 var userLower = "";
@@ -29,21 +27,15 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
 
      var userLength = window.prompt("How many characters? (8 - 128)"); 
+
     
-    if (userLength < 8) {
+    if ( userLength < 8 || userLength > 128) {
     window.alert("MUST CHOOSE CHARACTER BETWEEN 8- 128")
     return;
     }
-    else if (userLength >= 8){
+    else {
         window.confirm("You choose " + userLength); 
         console.log(userLength);
-    }
-    if (userLength > 128) {
-    window.alert("MUST CHOOSE CHARACTER BETWEEN 8- 128")
-    return;
-    }
-    else if (userLength <= 128) {
-        window.confirm("You choose " + userLength); 
          
     } 
     var userUpper = window.confirm("Include UPPERCASE letters?");
@@ -74,7 +66,7 @@ function generatePassword() {
 
 // 2. validate input, run for loop
 
-for (var i=0; i< characterLength; i++)
+// for (var i=0; i< characterLength; i++)
 // 3. Generate password
 
 // 4. display generated pw 
