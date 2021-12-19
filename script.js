@@ -29,14 +29,13 @@ function generatePassword() {
      var userLength = window.prompt("How many characters? (8 - 128)"); 
 
     
-    if ( userLength < 8 || userLength > 128) {
+    if (userLength < 8 || userLength > 128) {
     window.alert("MUST CHOOSE CHARACTER BETWEEN 8- 128")
     return;
     }
     else {
         window.confirm("You choose " + userLength); 
-        console.log(userLength);
-         
+        console.log(userLength);   
     } 
     var userUpper = window.confirm("Include UPPERCASE letters?");
     console.log(userUpper);
@@ -50,8 +49,21 @@ function generatePassword() {
    var userNumbers = window.confirm("Include numbers?");
        console.log(userNumbers);
 
-// // 1.a password 8 - 128 letters in length, array
+// Vadiate Users choices
+    window.alert(
+        "You choose: \nLength: " + userLength + "\nUPPERCASE: " + userUpper + "\nlowercase: " + userLower + "\nSpecial Characters: " + userSpecial + "\nNumbers: "
++ userNumbers
+    ); 
 
+    var index = Math.floor(Math.random() * charactersLength.length);
+    var generatedPW
+   
+    for (var i=0; i< charactersLength.length; i++) {
+        passwordText += charactersLength[i]; 
+        console.log(passwordText);
+    }
+    
+// // 1.a password 8 - 128 letters in length, array
 } 
 // // function getRandomNumber() 
 // //     {
