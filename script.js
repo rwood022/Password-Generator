@@ -1,10 +1,11 @@
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var alphabetLower = ("abcdefghijklmnopqrstuvwxyz");
-var alphabetUpper = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-var special = ("!@#$%^&*()_+~{}|[]\<>?,./:;'");
-var numbers = ("0123456789");
-var charactersLength = [alphabetUpper, alphabetLower, special, numbers];
+var alphabetLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var alphabetUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "~", "{", "}", "|", "[", "]", "?"];
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var characters = [alphabetUpper, alphabetLower, special, numbers];
 
 
 //Users variables
@@ -15,19 +16,17 @@ var userNumber = "";
 
 
 function writePassword() {
-    var password = generatePassword();
+  
     var passwordText = document.querySelector("#password");
-    passwordText.value = password;
+   
 }  
 
-generateBtn.addEventListener("click", writePassword);
-
-
-// 1. Prompt User for Password criteria
+//  Prompt User for Password criteria
 function generatePassword() {
-
-     var userLength = window.prompt("How many characters? (8 - 128)"); 
-
+    console.log(generatePassword);
+     
+    var userLength = window.prompt("How many characters? (8 - 128)"); 
+    // var passwordLength = userLength.value;
     
     if (userLength < 8 || userLength > 128) {
     window.alert("MUST CHOOSE CHARACTER BETWEEN 8- 128")
@@ -53,44 +52,42 @@ function generatePassword() {
     window.alert(
         "You choose: \nLength: " + userLength + "\nUPPERCASE: " + userUpper + "\nlowercase: " + userLower + "\nSpecial Characters: " + userSpecial + "\nNumbers: "
 + userNumbers
-    ); 
-
-    var index = Math.floor(Math.random() * charactersLength.length);
-    var generatedPW
-   
-    for (var i=0; i< charactersLength.length; i++) {
-        passwordText += charactersLength[i]; 
-        console.log(passwordText);
+    );  
+    // Removes the users false selection from the array
+    if (userUpper = false) {
+        characters.splice(0);
+        console.log(characters.splice);
     }
+
+    if (userLower = false) {
+        characters.splice(1);
+        console.log(characters.splice);
+    }
+
+    if (userSpecial = false) {
+        characters.splice(2);
+        console.log(characters.splice)
+    }
+
+    if (userNumbers = false) {
+        characters.splice(3);
+        console.log(characters.splice);
+    }
+
+
+//   Randomizes password character
+    for (var i=0; i < userLength; i++) {
+        var password = characters[Math.floor(Math.random() * characters.length - 1)]; 
+        console.log(password);
+
+        var passwordHTML = document.getElementById("password");
+        passwordHTML.value = password;
+      
+       
     
-// // 1.a password 8 - 128 letters in length, array
-} 
-// // function getRandomNumber() 
-// //     {
-// //         (Math.floor(math.random() * 128) + 8);
-// //     } 
-// //  console.log(getRandomNumber);
+}}
 
-
-// // 1.b lower case, upper case, numberic, and special
-// var userLower = alphabetLower[Math.floor(Math.random())]
-
-
-// 2. validate input, run for loop
-
-// for (var i=0; i< characterLength; i++)
-// 3. Generate password
-
-// 4. display generated pw 
-// {return "Generated password will go here!";
-// }
-
-
-// // Write password to the #password input
-
-
-// function generatePassword() {
-//     password = "";
-
-// Add event listener to generate button
-
+generatePassword();
+writePassword();
+generateBtn.addEventListener("click", writePassword);
+ 
