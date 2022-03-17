@@ -1,5 +1,7 @@
 # Description:
 
+Try it here: https://rwood022.github.io/Password-Generator/
+
 Password Generator that creates a random password based on the users desired length and characters selection. The purpose of this exercise was to create an application that will run in the browser and feature dynamically updated HTML and CSS powered by JavaScript code. 
 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
