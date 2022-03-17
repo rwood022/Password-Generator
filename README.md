@@ -15,7 +15,11 @@ To begin, click the "Generate Password" button. It will prompt a series of windo
 The Password Generator will allow the user to obtain a unique password with each run. This allows the user to never repeat passwords and protects them from hackers. 
 
 # Visuals
-<img 
+<img src="assets/length.png" alt="prompt box characters length"/>
+<img src="assets/uppercase.png" alt="prompt box for uppercase letter"/>
+<img src="assets/numbers.png" alt="prompt box for numbers"/>
+<img src="assets/special-characters.png" alt="prompt box for special characters"/>
+<img src="assets/confirmation.png" alt="prompt box for confirmation"/>
 
 # Credits:
 
