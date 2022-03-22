@@ -19,6 +19,7 @@ To begin, click the "Generate Password" button. It will prompt a series of windo
 <img src="assets/numbers.png" alt="prompt box for numbers"/>
 <img src="assets/special-characters.png" alt="prompt box for special characters"/>
 <img src="assets/confirmation.png" alt="prompt box for confirmation"/>
+<img src="assets/passwordResults.png" alt="displays password in box"/> 
 
 # Credits:
 
